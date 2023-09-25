@@ -32,7 +32,7 @@ bcrypt.hash(password, saltRounds, (err, hash) => {
 
 
  //criando os produtos (inserindo produtos na tabela)
- let hashPass = await bcrypt.hash(password, saltRounds);
+ var hashPass = await bcrypt.hash(password, saltRounds);
 
 const novoUsuario = await usuario.create({
   nome: req.body.nome,
