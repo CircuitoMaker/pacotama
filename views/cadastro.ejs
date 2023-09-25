@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/login.css' />
+    <script src="/javascripts/cadastro.js"></script> 
+    <title>LOGIN</title>
+</head>
+<body>
+    <h1>CADASTRO</h1>
+    <main >
+        
+       
+        
+<form class="main" method="POST" onsubmit="testaCampos()" action="/registro">
+        
+<label class="pacotama">PACOTAMA</label>
+
+<h2>Nome:</h2>
+<input name="nome" class="texto" type="text" id="nome">
+
+<h2>Email:</h2>
+<input name="email" class="texto" type="text" id="email">
+
+<h2>Senha:</h2>
+<input name="senha" class="texto" type="password" id="senha">
+
+<input type="submit" class="loginBtn" value="Cadastrar" >
+
+<label for="" class="MSGAlerta" hidden id="MSGAlerta">* Todos os Campos São Obrigatórios</label>
+
+</form>
+
+    </main>
+
+</body>
+</html>

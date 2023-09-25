@@ -1,0 +1,96 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(221, 210, 213)
+}
+
+body h1{
+    margin: 0;
+    margin-top: 5rem;
+}
+
+h2{
+    margin: 0;
+}
+
+.texto{
+    margin-bottom: 2rem;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  height: 25rem;
+  width: 25rem;
+  border-radius: 25px;
+  border: 3px solid blueviolet;
+  box-shadow: 30px;
+  background-color:  chartreuse;
+}
+
+h5{
+    margin: 0;
+}
+.lembrarme{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+align-items: center;
+font-weight: bold;
+
+}
+
+
+
+.loginBtn{
+    height: 25px;
+    width: 6rem;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: -15px;
+    margin-bottom: 20px;
+    border: 2px solid blueviolet;
+    cursor: pointer;
+}
+
+.check{
+    cursor: pointer;
+}
+.label{
+    cursor: pointer;
+}
+
+.pacotama{
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+   font-weight: bold;
+   color: white;
+}
+
+.MSGAlerta{
+    font-size: 16px;
+  font-weight: bold;
+  color: red;
+  }
+
+  .msgErro{
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+    margin-top: 1rem;
+  }
+
+
+  .cadastroLabel{
+    color: black;
+    text-decoration:none;
+    font-size: 18px;
+    font-weight: bold;
+
+  }

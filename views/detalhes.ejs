@@ -1,0 +1,38 @@
+    <%- include partials/header.ejs %>
+
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+    <link rel='stylesheet' href='/stylesheets/detalhes.css' />
+    <script src="/javascripts/index.js" defer></script> 
+
+<main>
+
+
+    <h1>Detalhes do Pacote [ <%- codigo %> ]</h1>
+
+
+<% for( let index = detalhes.status_list.length -2; index >= 0 ; index-- ) { %>
+  
+<div class="cardsDetalhes">
+
+<div class="dataHoraStatus">
+    <h5><%= detalhes.status_list[index].data %></h5>
+    <h5><%= hora[index] %></h5>
+    <img class="statusImg" src="/images/emTransito.png" alt="">
+</div>
+
+<div class="statusLocal"> 
+    <h3><%= detalhes.status_list[index].status %></h3>
+    <h3><%= detalhes.status_list[index].local %></h3>
+    <h3><%= detalhes.status_list[index].destino %></h3>
+</div>
+
+</div>
+
+<% } %>
+
+
+</main>
+
+
+
+<%- include partials/footer.ejs %>

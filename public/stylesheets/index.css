@@ -1,0 +1,383 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,400;8..144,600&family=Roboto+Slab:wght@500;600;700&family=Sedgwick+Ave+Display&display=swap');
+
+body {
+ /* font-family: 'Roboto Slab', sans-serif; */
+
+ display:flex;
+ flex-direction: column;
+ align-content: center;
+ font: 15px "Lucida Grande", Helvetica, Arial, sans-serif; 
+ width: 100vw;
+ margin: 0;
+
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.topo{
+  height: 120px;
+  width: 100vw;
+  background-color: chartreuse;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  align-items: center;
+  margin: 0;
+ 
+}
+
+
+
+.topo h1{
+  color: white;
+  font: 60px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+
+  background:  linear-gradient(45deg, red,black,white, blue, yellow);
+  background-size: 500% 500%;
+  animation: animate 8s ease infinite;
+
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+
+}
+
+@keyframes animate {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.avatarImg{
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50rem;
+  border-radius: 25px 8px;
+  border: 2px solid #3498db;
+}
+
+.divCadastro{
+  display: flex;
+ flex-direction: row;
+ justify-content: space-around;
+ align-items: center;
+ height: 70px;
+ width: 100%;
+ border: 2px solid black;
+}
+
+
+
+
+.divCodigo{
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+ 
+}
+
+.divCodigo input{
+  width: 10rem;
+}
+
+.divCodigo h5{
+  margin: 0.5rem;
+  padding: 0;
+}
+
+.divNome{
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+
+}
+
+.divNome h5{
+  margin: 0.5rem;
+padding: 0;
+}
+
+.divBtn{
+  display: flex;
+  flex-direction: column;
+  height: 1.8rem;
+  margin: 0;
+
+}
+
+.cadastrarBtn{
+  height: 1.8rem;
+  width: 7rem;
+border-radius: 8px;
+cursor: pointer;
+font-weight: bold;
+}
+
+
+
+.divIdentificacao{
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+
+}
+
+.sairBtn{
+ width: 80px;
+ height: 1.8rem;
+ margin: 0;
+ cursor: pointer;
+ border-radius: 4px;
+ font-weight: bold;
+}
+
+.labelNome{
+ margin: 0;
+
+}
+
+
+.formCadastroPacotes{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+ 
+}
+
+
+
+.cardPacotes{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; 
+  align-items: center;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  width: 96vw;
+  height: 4rem;
+  background-color: darkgray;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(17, 18, 17, 0.2); 
+ /* flex-basis: 200px; */
+}
+
+.cardPacotes h5{
+  margin: 0;
+}
+
+
+.statusImg{
+  height: 2rem;
+  width: 2rem;
+  border-radius: 1rem;
+}
+
+.dataHoraStatus{
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.5rem;
+  align-items: center;
+  width: 10vw;
+  margin-left: 2vw;
+}
+
+
+.nomeEDias{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35vw;
+  margin-left: 10vw;
+}
+
+
+.status{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  width: 55vw;
+  margin-left: 10vw;
+  /* margin-bottom: 0.2rem; */
+  box-sizing: border-box;
+}
+
+.status h6{
+  margin: 0.1rem;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.excluirEEntregueBtn{
+  display: flex;
+  flex-direction: row;
+  width: 30vh;
+  margin-left: 10vh;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;
+}
+
+.excluirBtn{
+  height: 1.8rem;
+  width: 4.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.entregueBtn{
+  height: 1.8rem;
+  width: 4.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.labelNomeDoPacote{
+font-size: 20px;
+font-weight: bold;
+
+}
+
+.labelNomeDoPacote a{
+  text-decoration: none;
+  color: #000;
+}
+
+.labelNomeDoPacote a:hover{
+  zoom: 1.1;
+}
+
+
+
+
+
+
+
+
+.footer{
+  height: 60px;
+  width: 100;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+background-color: chartreuse;
+font-size: 18px;
+border: 2px solid blueviolet;
+
+margin-right: 0;
+margin-top: 3rem;
+
+
+}
+
+
+.numeroDoPacote{
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.errMsg{
+  font-size: 14px;
+font-weight: bold;
+color: red;
+
+}
+
+
+.Dica{
+  position: relative;
+  margin: 0;
+  display: inline-block;
+
+}
+
+.Dica:hover .DicaTexto{
+visibility: visible;
+}
+
+.DicaTexto{
+  position: absolute; 
+  visibility: hidden; 
+  font-size: 13px;
+  width: 150px; 
+  background: black; 
+  color: #fff; 
+  text-align: center;
+  padding:15px 15px;
+  border-radius: 6px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -75px; 
+  margin-bottom: 5px;
+
+}
+
+.DicaTexto:after{
+content:" ";
+position: absolute;
+top: 100%;
+left: 50%;
+margin-left: 5px;
+border-width:5px;
+border-style: solid;
+border-color: #000 transparent transparent transparent;
+
+}
+
+
+
+
+@keyframes brilho {
+  0%, 100% {
+    border-color: transparent; /* Começa e termina com borda transparente */
+  }
+  50% {
+    border-color: #6be84f; /* Define a cor do brilho */
+  }
+}
+
+
+.bordaBrilhante {
+  border: 4px solid transparent; /* Define a largura da borda */
+  animation: brilho 0.1s infinite; /* Aplica a animação */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; 
+  align-items: center;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  width: 96vw;
+  height: 4rem;
+  background-color: darkgray;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(17, 18, 17, 0.2); 
+}
+
+.bordaBrilhante h5{
+  margin: 0;
+}

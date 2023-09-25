@@ -1,0 +1,114 @@
+<%- include partials/header.ejs %>
+
+<link rel='stylesheet' href='/stylesheets/index.css' />
+<script src="/javascripts/index.js" defer></script> 
+
+<main class="main">
+  <form class="formCadastroPacotes" method="POST" action="/cadastraPacotes" onsubmit="testaCodigoENome()">
+    <div class="divCadastro">
+     
+        <div class="divCodigo">
+          <h5>Código</h5>
+          <input type="text" id="codigo" name="codigo" placeholder="EX...MT123443672BR">
+          <h5 class="errMsg" id="errMsgCod" hidden>*Código inválido!</h5> 
+        </div>
+
+        <div class="divNome">
+          <h5>Nome do Pacote</h5>
+          <input type="text" id="nomePacote" name="nome" placeholder="EX...Perfumes">
+          <h5 class="errMsg" id="errMsgNome" hidden>*Adicione um nome ao pacote!</h5>  
+        </div>
+
+        <div class="divBtn">
+          <button type="submit" class="cadastrarBtn">Cadastrar</button>
+        </div>
+      </div>
+   
+  </form>
+
+  <h3>Você tem <%- cards %> pacotes pendentes!</h3>
+
+
+
+  <% for (let index = 0; index < cards; index++) { %>
+    
+    <% if ( conteudo[index].alterado == "1" ) { %>
+      <div class="bordaBrilhante" style="animation: brilho 2s infinite;">
+        <% } else { %>
+          <div class="cardPacotes" style="border: 5px solid rgb(23, 46, 23); padding: 5px;">
+        <% } %>
+    
+
+      
+      <div class="dataHoraStatus">
+        <h5><%- conteudo[index].data %></h5>
+        <h5><%- conteudo[index].hora %></h5>         
+      
+     <% if (status[index] == "entregue") { %>
+      <img class="statusImg" src="/images/entregue.png" alt="">
+    <% } %>
+
+      <% if (status[index] == "postado") { %>
+      <img class="statusImg" src="/images/Postado.png" alt="">
+      <% } %>
+
+      <%  if (status[index] == "saiuParaEntrega") { %>
+      <img class="statusImg" src="/images/saiuParaAEntrega.png" alt="">
+      <% } %>
+
+      <% if (status[index] == "tributado") { %>
+        <img class="statusImg" src="/images/tributado.png" alt="">
+    <% } %>
+
+    <% if (status[index] == "emTransito"){ %>
+      <img class="statusImg" src="/images/emTransito.png" alt="">
+    <% } %>
+
+      </div>
+
+      
+
+      <div class="nomeEDias">
+       <h5 class="labelNomeDoPacote"> <a href="/detalhes/<%- conteudo[index].codigo %>"><%- conteudo[index].nome %> </a></h5>
+        <h5 class="labelDias">(<%-diasUteis[0] %> dias úteis)</h5>
+      </div>
+
+      <div class="status">
+        <h5><%- conteudo[index].status %></h5>
+        <h5><%- conteudo[index].local %></h5>
+        <h5><%- conteudo[index].destino %></h5>
+        <h5><%- conteudo[index].origem %></h5>
+      </div>
+
+      <div class="excluirEEntregueBtn">
+        <form method="POST" action="/excluiPacote">
+          <input type="text" name="id" value=<%- conteudo[index].idPacote %> hidden>
+
+          <div class="Dica">
+            <button type="submit" class="excluirBtn">Excluir</button>
+            <div class="DicaTexto">
+              Excluir pacote <%- conteudo[index].codigo %>?
+            </div>
+          </div>
+        </form>
+
+     
+    <form method="POST" action="/entregue">
+          <input type="text" name="id" value=<%- conteudo[index].idPacote %> hidden>
+          <div class="Dica">
+          <button class="entregueBtn">Entregue</button>
+         <div class="DicaTexto">
+          Marcar como entregue?
+        </div>
+      </div>
+    </form>
+     
+     
+      </div>
+    </div>
+  <% } %>
+
+ 
+</main>
+
+<%- include partials/footer.ejs %>

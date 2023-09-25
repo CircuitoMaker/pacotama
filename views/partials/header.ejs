@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+   
+  </head>
+  <body>
+    
+<div class="topo">
+
+    <h1 class="pacotamaLogo"><a href="/">Pacotama</a></h1>
+    
+ 
+
+    <a href="/" class="sairBtn"><button class="sairBtn">Pacotes</button></a>
+
+
+    <form method="POST" action="/entregues">
+  <input type="hidden" name="tipo" value="entregues">
+  <button class="sairBtn">Entregues</button>
+</form>
+
+     
+    <div class="divIdentificacao">
+      <a href="/users">
+      <img class="avatarImg" src="/images/avatar.png" alt="">
+      </a>
+    <h5 class="labelNome"><%-logado%></h5>
+     
+     <input class="sairBtn" id="sairBtn" type="button" onclick="botao()" value="Sair" />
+
+<script>
+  
+
+function botao(){
+
+  window.location.href = "/logout";
+}
+
+
+</script>
+
+
+  </div>
+  </div>

@@ -1,0 +1,8 @@
+USE dbtest;
+
+SELECT * FROM Pacotes;
+SELECT * FROM Usuarios;
+
+UPDATE Pacotes SET data = '0000' WHERE idPacote = 58;
+
+ALTER TABLE Pacotes ADD alterado VARCHAR(1);

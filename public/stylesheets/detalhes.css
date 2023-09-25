@@ -1,0 +1,71 @@
+/* Definindo a classe para adicionar margens pretas à tabela */
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.table-with-margin {
+    width: 95%;
+    border-collapse: collapse;
+    margin: 20px;
+  }
+  
+  .table-with-margin th,
+  .table-with-margin td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  
+
+  .cardsDetalhes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    background-color: darkgray;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(17, 18, 17, 0.2); 
+    width: 98vw;
+    height: 4rem;
+    border-radius: 5px;
+    border: 2px solid  #6be84f;
+  }
+
+  .cardsDetalhes h5{
+    margin: 0;
+  }
+  
+  .statusImg{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 1rem;
+  }
+
+    .dataHoraStatus{
+      display: flex;
+      flex-direction: column;
+      margin-left: 0.5rem;
+      align-items: center;
+      width: 10vw;
+      margin-left: 2vw;
+    }
+  
+
+  .statusLocal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8vw;
+    width: 50vw;
+    height: auto;
+  }
+
+  .statusLocal h3{
+    margin: 0.1rem;
+  }

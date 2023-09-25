@@ -1,0 +1,51 @@
+<%- include partials/header.ejs %>
+
+<link rel='stylesheet' href='/stylesheets/index.css' />
+<link rel='stylesheet' href='/stylesheets/user.css' />
+<!-- <script src="/javascripts/index.js" defer></script>   -->
+
+<main class="main">
+ 
+
+  <h3>Total de <%- users.length %> usuários cadastrados!</h3>
+  
+
+      <h1>Lista de Usuários</h1>
+
+      <table class="table-with-margin">
+        <thead>
+          <tr>
+          <th>ID</th>
+          <th>NOME</th>
+          <th>EMAIL</th>
+          <th>PACOTES</th>
+          <th>EXCLUIR</th>
+          
+        </tr></thead>
+        <tbody>
+        
+      <div id="userList">
+        <% for (let i = 0; i < users.length; i++) { %>
+          <tr>
+            <th><strong><%= users[i].idUsuario %></strong></th>
+            <th><strong><%= users[i].nome %></strong></th>
+            <th><strong><%= users[i].email %></strong></th>
+            <th><strong><%= numeroDePacotes[i] %></strong></th>
+            <th>
+              <form method="POST" action="/excluiUser">
+                <input type="text" name="id" value="<%= users[i].idUsuario %>" hidden>
+                <div class="Dica">
+                  <button class="entregueBtn">Excluir</button>
+                </div>
+              </form>
+            </th>
+          </tr>
+        <% } %>
+        
+  </tbody>
+</table>
+  
+
+</main>
+
+<%- include partials/footer.ejs %>

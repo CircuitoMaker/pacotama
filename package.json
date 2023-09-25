@@ -1,0 +1,23 @@
+{
+  "name": "pacotama",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "chalk": "^3.0.0",
+    "cookie-parser": "~1.4.4",
+    "correios-rastreamento": "^0.6.0",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "mysql2": "^3.3.5",
+    "nodemailer": "^6.9.4",
+    "rastreio-correios": "^1.1.7",
+    "sequelize": "^6.32.0"
+  }
+}

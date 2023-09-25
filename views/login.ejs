@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/login.css' />
+    <script src="/javascripts/login.js" defer></script> 
+    <title><%-title%></title>
+</head>
+<body>
+
+    <h1>LOGIN</h1>
+    <main>
+        
+<form class="main" method="POST" action="/verificaLogin">
+
+<label class="pacotama" >PACOTAMA</label>
+
+<h2>Email:</h2>
+<input name="email" class="texto" type="text">
+
+<h2>Senha:</h2>
+<input name="senha" class="texto" type="password">
+
+<input type="submit" class="loginBtn" value="Login">
+
+<div class="lembrarme">
+<input id="check" class="check" type="checkbox">
+<label for="check" class="label"> Lembrar-me</label>
+</div>
+
+
+<a href="/cadastro" class="cadastroLabel">Cadastro</a>
+
+
+    </div>
+
+<% if (erro) { %>
+    <%if(erro == 'erro1'){%> 
+    <h5 class="msgErro">*Verifique os dados de login!</h5>
+    <%}%>
+    
+    <%if(erro == 'erro2'){%> 
+        <h5 class="msgErro">*Erro de comunicação com o BD!</h5>
+        <%}%>
+    <% } %>
+
+</form>
+
+
+    </main>
+
+</body>
+</html>
