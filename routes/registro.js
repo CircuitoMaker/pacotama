@@ -17,7 +17,7 @@ router.post('/', async function (req, res, next) {
 const saltRounds = 10; // Número de saltos a serem aplicados
 
 const password = req.body.senha;
-let hashPass="";
+//let hashPass="";
 
 bcrypt.hash(password, saltRounds, (err, hash) => {
     if (err) {
@@ -32,6 +32,8 @@ bcrypt.hash(password, saltRounds, (err, hash) => {
 
 
  //criando os produtos (inserindo produtos na tabela)
+ const hashPass = await bcrypt.hash(password, saltRounds);
+
 const novoUsuario = await usuario.create({
   nome: req.body.nome,
   email: req.body.email,
