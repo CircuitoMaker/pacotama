@@ -17,14 +17,14 @@ router.post('/', async function (req, res, next) {
 const saltRounds = 10; // Número de saltos a serem aplicados
 
 const password = req.body.senha;
-let hashPass;
+let hashPass="";
 
 bcrypt.hash(password, saltRounds, (err, hash) => {
     if (err) {
         console.error('Erro ao criar hash:', err);
     } else {
         console.log('Hash gerado:', hash);
-       hashPass = hash
+       hashPass = hash;
         // Agora você pode armazenar o hash em um banco de dados ou em outro local seguro
     }
 });
