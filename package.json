@@ -6,7 +6,7 @@
     "start": "node bin/www"
   },
   "dependencies": {
-    "bcrypt": "^5.1.0",
+    "bcrypt": "^5.1.1",
     "chalk": "^3.0.0",
     "cookie-parser": "~1.4.4",
     "correios-rastreamento": "^0.6.0",
